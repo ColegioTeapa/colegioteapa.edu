@@ -1,0 +1,346 @@
+<html xmlns="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Historia</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #485408;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(images/bg.jpg);
+	background-repeat: repeat-x;
+}
+-->
+</style></head>
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+<body>
+<table width="950" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" style="border:solid 1px #000000">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="images/header_01.jpg" width="317" height="293" /></td>
+        <td><img src="images/header_02.jpg" width="316" height="293" /></td>
+        <td><img src="images/header_03.jpg" width="317" height="293" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td background="images/menu_bg.jpg" height="65"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="25%"></td>
+        <td width="12%" align="center"><a href="index.html" class="menu">INICIO</a></td>
+        <td width="12%" align="center"><a href="historiac.html" class="menu">ANTECEDENTES</a></td>
+        <td width="13%" align="center"><a href="incriprimaria.html" class="menu">ACADEMICO</a></td>
+        <td width="13%" align="center"><a href="prinprimaria.html" class="menu">SECCIONES</a></td>
+        <td width="12%" align="center"><a href="caleventos.html" class="menu">AVISOS</a></td>
+        <td width="13%" align="center"><a href="tareas.html" class="menu">ALUMNOS</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="35%" valign="top" bgcolor="#f6f5f2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="10"></td>
+              </tr>
+              <tr>
+                <td style="border:solid 2px #333333"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                   <tr>
+                    <td height="33" class="topbg"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/development.jpg" width="323" height="79" /></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                    
+                    <SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+var now = new Date();
+var month_array = new Array("ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE");
+document.write("<form name=date_list><table bgcolor=silver><tr><td>");
+document.write("<select name=month onchange=change_month(this.options.selectedIndex)>");
+for(i=0;i<month_array.length;i++)
+{
+ if (now.getMonth() != i)
+ {document.write ("<option value="+i+">"+month_array[i]);}
+ else
+ {document.write ("<option value="+i+" selected>"+month_array[i]);}
+
+}
+document.write("</select>");
+document.write("</td><td>");
+document.write ("<select name=year onchange=change_year(this.options[this.options.selectedIndex])>");
+for(i=2013;i<3000;i++)
+{
+ if (now.getYear() != i)
+ {document.write("<option value="+i+">"+i);}
+ else
+ {document.write("<option value="+i+" selected>"+i);}
+}
+document.write("</select></td></tr><tr><td colspan=2><center>");
+
+document.write("<table bgcolor=white border=0 cellspacing = 0 cellpading = 0 width=100%><tr bgcolor=gray align=center>");
+document.write("<td><font color=silver>L</font></td><td><font color=silver>M</td><td><font color=silver>M</td><td><font color=silver>J</td><td><font color=silver>V</td><td ><font color=silver>S</td><td ><font color=silver>D</td>");
+document.write("</tr><tr>");
+for(j=0;j<6;j++)
+{
+ for(i=0;i<7;i++)
+ {
+   document.write("<td align=center id=d"+i+"r"+j+"></td>")
+ }
+ document.write("</tr>");
+}
+
+document.write("</table>");
+
+document.write("</center></from></td></tr></table>");
+
+var show_date = new Date();
+
+function set_cal(show_date)
+{
+begin_day = new Date (show_date.getYear(),show_date.getMonth(),1);
+begin_day_date = begin_day.getDay();
+end_day = new Date (show_date.getYear(),show_date.getMonth()+1,1);
+count_day = (end_day - begin_day)/1000/60/60/24;
+input_table(begin_day_date,count_day);
+}
+set_cal(show_date);
+
+function input_table(begin,count)
+{
+init();
+j=0;
+if (begin!=0){i=begin-1;}else{i=6}
+for (c=1;c<count+1;c++)
+{
+ colum_name = eval("d"+i+"r"+j);
+ if ((now.getDate() == c)&&(show_date.getMonth() == now.getMonth())&&(show_date.getYear() == now.getYear())) {colum_name.style.backgroundColor = "blue";colum_name.style.color = "white";};
+ colum_name.innerText =  c;
+ i++;
+ if (i==7){i=0;j++;}
+}
+}
+
+function init()
+{
+for(j=0;j<6;j++)
+{
+ for(i=0;i<7;i++)
+ {
+ colum_name = eval("d"+i+"r"+j);
+ colum_name.innerText =  "-";
+ colum_name.style.backgroundColor ="";
+ colum_name.style.color ="";
+ }
+}
+}
+
+function change_month(sel_month)
+{
+show_date = new Date(show_date.getYear(),sel_month,1);
+set_cal(show_date);
+}
+
+function change_year(sel_year)
+{
+sel_year = sel_year.value;
+show_date = new Date(sel_year,show_date.getMonth(),1);
+set_cal(show_date);
+}
+//  End -->
+</script>
+                    
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text"><p align="right"></p></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/antecedentes.jpg" width="323" height="79" /></td>
+                  </tr>
+                  <tr>
+                    <td class="category"><ul>
+                      <li><a href="historiac.html">HISTORIA</a></li>
+                      <li><a href="identidad.html">IDENTIDAD DEL COLEGIO</a></li>
+                      <li><a href="mvv.html">MISIÓN, VISIÓN Y VALORES</a></li>
+                      <li><a href="escudolema.html">ESCUDO Y LEMA</a></li>
+                      <li><a href="himno.html">HIMNO</a></li>
+                    </ul></td>
+                  </tr>
+                  <tr>
+                    <td align="right">
+                      <br />
+                    </a></td>
+                  </tr>
+                  <tr>
+                    <td height="30" bgcolor="#8A9A2D"></td>
+                  </tr>
+                   </table></td>
+              </tr>
+            </table></td>
+            <td width="2%"></td>
+            <td width="63%" valign="top"><table width="573" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="10"></td>
+              </tr>
+              <tr>
+                <td><img src="images/top_body_section.jpg" width="573" height="19" /></td>
+              </tr>
+              <tr>
+                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="19%" align="center" valign="middle"><img src="images/welcome_icon.jpg" width="57" height="52" /></td>
+                    <td width="81%" class="welcome"></td>
+                  </tr>
+                </table></td>
+              </tr>
+                 <tr>
+                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="35%" align="center" valign="middle"><img src="images/working_girl.jpg" width="180" height="281" /></td>
+                        <td width="65%" class="text"><p class="category"><strong>FUNDACION  DE LA CONGREGACION SIERVA DE JESUS SACRAMENTADO </strong></p>
+                          <p class="category">No  cabe duda que  la obra cumbre del  Señor  Carrillo   fue la <br />
+                            fundación  de la Congregación  Religiosa   de las  Siervas  de Jesús Sacramentado,   nacida del  fondo  de    su  corazón  sacerdotal   de laEucaristía a raíz   de una profanación  sacrílega de  Hostias Consagradas. </p>
+                          <p class="category">El 18 de julio de 1901 un ladrón robó del sagrario de la  parroquia un  vaso  sagrado   con  hostias  consagradas.   Este sacrilegio  le fue particularmente   doloroso  y  fue el   llamado  definitivo  del   espíritu  santo  para que se convirtiera en el fundador de una congregación religiosa  cuyas hermanas se dedicarían amar y adorar a Jesús Sacramentado y a darlo a conocer y  hacerlo amar por medio de la educación cristiana de la niñez y la juventud.  </p>
+<p align="justify"></p></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td height="5"></td>
+                  </tr>
+                  <tr>
+                    <td class="text"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td align="center" valign="middle"></td>
+                            </tr>
+                          </table>                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td></td>
+                              </tr>
+                            <tr>
+                              <td class="text"><p class="category">Un día  mientras   veía en  una hora santa,  a unas   jovencitas  acercándose al  altar   para encender   lámparas  expiatorias,  el   Espíritu  Santo  lo   iluminó  y  pensó  &quot;Si  en   lugar de lámparas fueran almas adoradoras las que ardían siempre  ante el AMOR  HOSTIA....&quot;  y se decidió a hacerlo.  </p>
+                                <p class="category">El 25 de noviembre de 1904 nació para la iglesia esta  Congregación, recibiendo la primera aprobación oficial de la iglesia el 12 de septiembre de  1907, la cual atiende 120 Colegios, Diseminados   en  los  Estados   Unidos  del  Norteamérica,   México,  Guatemala,  Perú  y Argentina. </p>
+                                <p class="category"><strong>EL  COLEGIO TEAPA</strong></p>
+                                <p class="category">Entre 1914 y 1915 los obispos  fueron detenidos o expulsados,  los  sacerdotes encarcelados, las monjas expulsadas de sus  conventos,   el  culto  religioso   prohibido,  las escuelas  religiosas  cerradas,  las propiedades  eclesiásticas confiscadas.  La Constitución  de 1917  legalizó  el  ataque  a la iglesia y lo radicalizó de manera intolerable. </p>
+                                <p class="category">La ley reglamentaria del 130 constitucional facultaba,  siguiendo el dictado de la Constitución, a los gobernadores de los estados  de la República a  imponer cuotas y  requisitos especiales a los &quot;ministros del culto&quot;. </p>
+                                <p class="category">Tal fue el caso de uno de los  gobernadores más radicales, Tomás Garrido  Canabal quien decretó normas que iban incluso más lejos, pues obligaban a los  &quot;ministros del culto&quot; a casarse para poder oficiar, En los años 1925 y  1926 se intensificó el conflicto, ya que en octubre se prohibió el culto católico y se practicaban castigos a quienes practicaran  la religión. </p>
+                                <p class="category">Ya que se vio, que por los medios pacíficos no se podía  obtener la destitución de la Ley de Calles, en Enero  de  1927  empezó  la toma de armas,  con  el  grito   de &quot;Viva Cristo  Rey  y   Santa María  de Guadalupe&quot;. </p>
+                                <p class="category">Al  transcurrir  del   tiempo  y  una vez   consolidado  en el  poder   y  sin  el   obstáculo  de  la   influencia callista, Cárdenas se decidió a actuar sobre el  persistente conflicto religioso que aún era señal de la inestabilidad social del país. Aunque no se modificó  nada con respecto a la educación socialista, si desmanteló los elementos anticlericales de la política  de Estado y en 1936 declaró: </p>
+                                <p>&nbsp;</p>
+                                <center>
+                                  <p><em>El  gobierno   no  incurrirá  en  el  error   cometido  por  las administraciones </em> <br />
+                                    <em>anteriores,  de    considerar  la  cuestión   religiosa  como  problema </em> <br />
+                                    <em>preeminente…  No  compete</em>      <em>al   gobierno  promover  campañas</em><br />
+                                    <em>antirreligiosas  </em></p>
+                                </center>                                <p align="justify" class="category"><strong>Las  hermanas que estuvieron a cargo del Plantel Teapa en un inicio Fueron</strong></p></td>
+                              </tr>
+                            <tr>
+                              <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td valign="top"><blockquote>
+                                    <p class="category"><strong>Madre Superiora:</strong> <br />
+                                      <strong>Primera Conciliadora  y Ecónoma:</strong><br clear="all" />
+                                    </p>
+                                    <p class="category">Hermana  María Engracia de Jesús <br />
+                                      Hermana  María del Transito </p>
+                                  </blockquote>                                    </td>
+                                  </tr>
+                                </table></td>
+                              </tr>
+                            <tr>
+                              <td class="text"><p align="justify"></p></td>
+                              </tr>
+                            <tr>
+                              <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td valign="top"><blockquote>
+                                    <p class="category"><strong>Segunda Conciliadora y Secretaria:</strong> Hermana  Elena de la Paz <br />
+                                      Hermana de María Inmaculada <br />
+                                      Hermana María Mercedes de la Eucaristía <br />
+                                      Hermana Carmen Teresa de Nuestra Señora de Zapopan <br />
+                                      Hermana Ofelia Guadalupe <br />
+                                      Hermana Inés Cristina  </p>
+                                    <p class="category"><strong>Directoras Generales  del Colegio Teapa </strong> <br />
+                                      1.   1957  - 1963  Hermana María Engracia de Jesús <br />
+                                      2.   1963  - 1964  Hermana Ana Lucia del Padre  Celestial <br />
+                                      3.   1964  - 1973  Hermana María Engracias de Jesús <br />
+                                      4.   1973  - 1974 Hermana María Guadalupe Hernández Hernández <br />
+                                      5.   1974  - 1980 Hermana Margarita María Cervantes Campos <br />
+                                      6.   1980  - 1983 Hermana Guadalupe Madrid Torres <br />
+                                      7.   1983  - 1986 Hermana Gema Alicia Robles Gil <br />
+                                      8.   1986  - 1988 Hermana María del Carmen González Romo  <br />
+                                      9.   1988  - 1991 Hermana Teresa de Lourdes Díaz  <br />
+                                      10. 1991 - 1992 Hermana Justina García Rodríguez <br />
+                                      11. 1992 - 1994 Hermana Susana Galindo Fonseca <br />
+                                      12. 1994 - 1997 Hermana Guadalupe Madrid Torres <br />
+                                      13. 1997 - 1999 Hermana Graciela Medina Marín <br />
+                                      14. 1999 - 2000 Hermana María del Carmen Carrillo Ochoa <br />
+                                      15. 2000 - 2003 Hermana Filiberta Castro Corona <br />
+                                      16. 2002 - 2003 Hermana Rosa María Moreno Aparicio <br />
+                                      17. 2003 - 2006 Hermana Graciela Medina Marín <br />
+                                      18. 2006 - 2009 Hermana Teresita de Jesús Ramírez Martínez <br />
+                                      19. 2010 - Actual Hermana Maria Claudia Georgina Maldonado Martinez </p>
+                                  </blockquote>
+                                    <p class="category">Actualmente el  Colegio   Teapa   está incorporado  a  la  Secretaria de   Educación  del Estado de Tabasco (SE) y cuenta con 2 niveles educativos: Primaria y  Secundaria, posee una población de 238 alumnos y la plantilla docente está formado por docentes  seglares y religiosas. </p></td>
+                                  </tr>
+                                </table></td>
+                              </tr>
+                            <tr>
+                              <td class="text"><br />
+                                <br /></td>
+                              </tr>
+                            <tr>
+                              <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td></td>
+                                  </tr>
+                                </table></td>
+                              </tr>
+                            </table></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="8px;"></td>
+  </tr>
+  <tr>
+    <td height="5" bgcolor="#8a9a2c"></td>
+  </tr>
+  <tr>
+    <td class="footer"><p align="center"><strong>Avenida Gregorio Mendez # 310, Colonia Centro,   Teapa, Tabasco</strong></p>
+      <p align="center"><strong>Telefono: (932) 32 2 0065</strong><br />    
+        <br />
+      </p></td>
+  </tr>
+</table>
+
+</body>
+</html>

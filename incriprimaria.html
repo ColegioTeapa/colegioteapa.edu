@@ -1,0 +1,429 @@
+<html xmlns="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Inscripcion Primaria</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #485408;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(images/bg.jpg);
+	background-repeat: repeat-x;
+}
+-->
+</style>
+<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+</head>
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+<body>
+<table width="950" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" style="border:solid 1px #000000">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="images/header_01.jpg" width="317" height="293" /></td>
+        <td><img src="images/header_02.jpg" width="316" height="293" /></td>
+        <td><img src="images/header_03.jpg" width="317" height="293" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td background="images/menu_bg.jpg" height="65"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="25%"></td>
+        <td width="12%" align="center"><a href="index.html" class="menu">INICIO</a></td>
+        <td width="12%" align="center"><a href="historiac.html" class="menu">ANTECEDENTES</a></td>
+        <td width="13%" align="center"><a href="incriprimaria.html" class="menu">ACADEMICO</a></td>
+        <td width="13%" align="center"><a href="prinprimaria.html" class="menu">SECCIONES</a></td>
+        <td width="12%" align="center"><a href="caleventos.html" class="menu">AVISOS</a></td>
+        <td width="13%" align="center"><a href="tareas.html" class="menu">ALUMNOS</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="35%" valign="top" bgcolor="#f6f5f2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="10"></td>
+              </tr>
+              <tr>
+                <td style="border:solid 2px #333333"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                   <tr>
+                    <td height="33" class="topbg"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/development.jpg" width="323" height="79" /></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                    
+                    <SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+var now = new Date();
+var month_array = new Array("ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE");
+document.write("<form name=date_list><table bgcolor=silver><tr><td>");
+document.write("<select name=month onchange=change_month(this.options.selectedIndex)>");
+for(i=0;i<month_array.length;i++)
+{
+ if (now.getMonth() != i)
+ {document.write ("<option value="+i+">"+month_array[i]);}
+ else
+ {document.write ("<option value="+i+" selected>"+month_array[i]);}
+
+}
+document.write("</select>");
+document.write("</td><td>");
+document.write ("<select name=year onchange=change_year(this.options[this.options.selectedIndex])>");
+for(i=2013;i<3000;i++)
+{
+ if (now.getYear() != i)
+ {document.write("<option value="+i+">"+i);}
+ else
+ {document.write("<option value="+i+" selected>"+i);}
+}
+document.write("</select></td></tr><tr><td colspan=2><center>");
+
+document.write("<table bgcolor=white border=0 cellspacing = 0 cellpading = 0 width=100%><tr bgcolor=gray align=center>");
+document.write("<td><font color=silver>L</font></td><td><font color=silver>M</td><td><font color=silver>M</td><td><font color=silver>J</td><td><font color=silver>V</td><td ><font color=silver>S</td><td ><font color=silver>D</td>");
+document.write("</tr><tr>");
+for(j=0;j<6;j++)
+{
+ for(i=0;i<7;i++)
+ {
+   document.write("<td align=center id=d"+i+"r"+j+"></td>")
+ }
+ document.write("</tr>");
+}
+
+document.write("</table>");
+
+document.write("</center></from></td></tr></table>");
+
+var show_date = new Date();
+
+function set_cal(show_date)
+{
+begin_day = new Date (show_date.getYear(),show_date.getMonth(),1);
+begin_day_date = begin_day.getDay();
+end_day = new Date (show_date.getYear(),show_date.getMonth()+1,1);
+count_day = (end_day - begin_day)/1000/60/60/24;
+input_table(begin_day_date,count_day);
+}
+set_cal(show_date);
+
+function input_table(begin,count)
+{
+init();
+j=0;
+if (begin!=0){i=begin-1;}else{i=6}
+for (c=1;c<count+1;c++)
+{
+ colum_name = eval("d"+i+"r"+j);
+ if ((now.getDate() == c)&&(show_date.getMonth() == now.getMonth())&&(show_date.getYear() == now.getYear())) {colum_name.style.backgroundColor = "blue";colum_name.style.color = "white";};
+ colum_name.innerText =  c;
+ i++;
+ if (i==7){i=0;j++;}
+}
+}
+
+function init()
+{
+for(j=0;j<6;j++)
+{
+ for(i=0;i<7;i++)
+ {
+ colum_name = eval("d"+i+"r"+j);
+ colum_name.innerText =  "-";
+ colum_name.style.backgroundColor ="";
+ colum_name.style.color ="";
+ }
+}
+}
+
+function change_month(sel_month)
+{
+show_date = new Date(show_date.getYear(),sel_month,1);
+set_cal(show_date);
+}
+
+function change_year(sel_year)
+{
+sel_year = sel_year.value;
+show_date = new Date(sel_year,show_date.getMonth(),1);
+set_cal(show_date);
+}
+//  End -->
+</script>
+                    
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text"><p align="right"></p></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/academico.jpg" width="323" height="79" /></td>
+                  </tr>
+                  <tr>
+                    <td class="category"><ul>
+                      <li><strong>INSCRIPCIONES</strong></li>
+                      <li><a href="incriprimaria.html">NIVEL PRIMARIA</a></li>
+                      <li><a href="fiprimaria.html">FICHA DE INSCRIPCION</a></li>
+                      <li><a href="incrisecundaria.html">NIVEL SECUNDARIA</a></li>
+                      <li><a href="fisecundaria.html">FICHA DE INSCRIPCION</a></li>
+                      <li><strong>REGLAMENTO</strong></li>
+                      <li><a href="reprimaria.html">NIVEL PRIMARIA</a></li>
+                      <li><a href="reglasecundaria.html">NIVEL SECUNDARIA</a></li>
+                    </ul></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><br />
+                      <br />
+                    </a></td>
+                  </tr>
+                  <tr>
+                    <td height="30" bgcolor="#8A9A2D"></td>
+                  </tr>
+                   </table></td>
+              </tr>
+            </table></td>
+            <td width="2%"></td>
+            <td width="63%" valign="top"><table width="573" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="10"></td>
+              </tr>
+              <tr>
+                <td><img src="images/top_body_section.jpg" width="573" height="19" /></td>
+              </tr>
+              <tr>
+                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="19%" align="center" valign="middle"><img src="images/welcome_icon.jpg" width="57" height="52" /></td>
+                    <td width="81%" class="welcome"> Colegio Teapa</td>
+                  </tr>
+                </table></td>
+              </tr>
+                 <tr>
+                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="center" valign="middle"></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td height="5"></td>
+                  </tr>
+                  <tr>
+                    <td height="5"></td>
+                  </tr>
+                  <tr>
+                    <td><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td align="center" valign="middle"><table width="573" border="0" align="center" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td height="10"></td>
+                              </tr>
+                              <tr>
+                                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td class="text"><h1 align="center"><strong>NIVEL PRIMARIA</strong></h1>
+                                      <center>
+                                        </center></td>
+                                    </tr>
+                                  <tr>
+                                    <td height="5"></td>
+                                    </tr>
+                                  <tr>
+                                    <td height="141"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                      <tr>
+                                        <td height="34" valign="top"><p align="center"><strong>PERFIL DE INGRESO </strong></p></td>
+                                        </tr>
+                                      <tr>
+                                        <td width="50%" valign="top"><ul>
+                                          <li>
+                                            <div align="left">Competencias para el aprendizaje permanente. </div>
+                                          </li>
+                                          <li>
+                                            <div align="left">Competencias para el  manejo de la información.</div>
+                                          </li>
+                                          <li>
+                                            <div align="left">Competencias para el  manejo de situaciones.</div>
+                                          </li>
+                                          <li>
+                                            <div align="left">Competencias para la  convivencia.</div>
+                                          </li>
+                                          <li>
+                                            <div align="left">Competencias para la  vida en sociedad </div>
+                                          </li>
+                                          </ul></td>
+                                        </tr>
+                                      </table></td>
+                                    </tr>
+                                  <tr>
+                                    <td height="50"><div align="center">
+                                      <p><strong>PERFIL DE EGRESO </strong></p>
+                                      </div></td>
+                                    </tr>
+                                  <tr>
+                                    <td><ul>
+                                      <li>
+                                        <div align="left">Ama y adora a Jesús  Sacramentado</div>
+                                      </li>
+                                      <li>
+                                        <div align="left">Aprecia  y vive los valores humano-cristianos.</div>
+                                      </li>
+                                      <li>
+                                        <div align="left">Lee y  reflexiona en la Palabra de Dios.</div>
+                                      </li>
+                                      <li>
+                                        <div align="left">Utiliza  el lenguaje oral y escrito con claridad, fluidez y de manera adecuada.</div>
+                                      </li>
+                                      <li>
+                                        <div align="left">Emplea  los conocimientos adquiridos con el fin de interpretar y explicar procesos  sociales, económicos, culturales y naturales.</div>
+                                      </li>
+                                      <li>
+                                        <div align="left">Selecciona,  analiza, evalúa y comparte información proveniente de diversas fuentes y  aprovecha los recursos tecnológicos a su alcance. </div>
+                                      </li>
+                                      <li>
+                                        <div align="left">Busca  estrategias para traducir textos e interpretar información cotidiana, académica  y literaria de una lengua extranjera.</div>
+                                      </li>
+                                      </ul>
+                                      <p>&nbsp;</p></td>
+                                    </tr>
+                                  <tr>
+                                    <td><p align="center"><strong>REQUISITOS DE ADMISIÓN  NIVEL PRIMARIA</strong></p></td>
+                                    </tr>
+                                  <tr>
+                                    <td height="304"><blockquote>
+                                      <p><strong>PREINSCRIPCIONES: DEL 01 AL 29 DE FEBRERO DE 2013.</strong></p>
+                                      <p> 1.– Entrevista con los padres de  familia, del 01 al 29 de febrero de 8:30 hrs. </p>
+                                      <p align="center"><strong>DOCUMENTOS A ENTREGAR. </strong></p>
+                                      </blockquote>
+                                      <ul>
+                                        <li>
+                                          <div align="left"> Copia  de Acta de nacimiento. </div>
+                                        </li>
+                                        <li>
+                                          <div align="left">Copia  de CURP. </div>
+                                        </li>
+                                        <li>
+                                          <div align="left">Copia  de  la  Constancia de Preescolar.</div>
+                                        </li>
+                                        <li>
+                                          <div align="left">Copia de la Cartilla de Vacunación.</div>
+                                        </li>
+                                        <li>
+                                          <div align="left">Llenar ficha  de inscripción.</div>
+                                        </li>
+                                        <li>
+                                          <div align="left">Realizar pago de Inscripción en caja. </div>
+                                        </li>
+                                        </ul></td>
+                                    </tr>
+                                  <tr>
+                                    <td><p align="center"><strong>COSTO DE INSCRIPCIÓN.</strong><br />
+                                      De  Febrero a Junio será de $1,800.00</p>
+                                      <p align="center"> Informe sobre el Costo de  Inscripción y Colegiaturas en la <strong>Dirección del Colegio Teapa</strong>.</p></td>
+                                    </tr>
+                                  <tr>
+                                    <td align="center" valign="middle"></td>
+                                    </tr>
+                                  </table></td>
+                              </tr>
+                              <tr>
+                                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td colspan="3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <tr>
+                                        <td align="center" valign="middle"></td>
+                                      </tr>
+                                    </table></td>
+  </tr>
+                                  <tr>
+                                    <td height="5" colspan="3"></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="5%" class="text"><h2 align="center"></h2>
+                                      <center>
+                                      </center></td>
+                                    <td width="15%" class="text"></td>
+                                    <td width="80%" class="text"><h3></h3></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="3" class="text"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="5" colspan="3"></td>
+                                  </tr>
+                                </table></td>
+</tr>
+                              <tr>
+                                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td colspan="3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <tr> </tr>
+                                    </table></td>
+                                  </tr>
+                                </table></td>
+                              </tr>
+                            </table></td>
+                            </tr>
+                          <tr>
+                            <td></td>
+                            </tr>
+                          <tr>
+                            <td></td>
+                            </tr>
+                          <tr>
+                            <td></td>
+                          </tr>
+                          </table>                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td></td>
+                              </tr>
+                          </table></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="8px;"></td>
+  </tr>
+  <tr>
+    <td height="5" bgcolor="#8a9a2c"></td>
+  </tr>
+  <tr>
+    <td class="footer"><p align="center"><strong>Avenida Gregorio Mendez # 310, Colonia Centro,   Teapa, Tabasco</strong></p>
+      <p align="center"><strong>Telefono: (932) 32 2 0065</strong><br />    
+        <br />
+      </p></td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+swfobject.registerObject("FlashID");
+</script>
+</body>
+</html>

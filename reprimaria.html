@@ -1,0 +1,489 @@
+<html xmlns="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>COLEGIO TEAPA</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #485408;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(images/bg.jpg);
+	background-repeat: repeat-x;
+}
+-->
+</style>
+<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+</head>
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+<body>
+<table width="950" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" style="border:solid 1px #000000">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="images/header_01.jpg" width="317" height="293" /></td>
+        <td><img src="images/header_02.jpg" width="316" height="293" /></td>
+        <td><img src="images/header_03.jpg" width="317" height="293" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td background="images/menu_bg.jpg" height="65"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="25%"></td>
+        <td width="12%" align="center"><a href="index.html" class="menu">INICIO</a></td>
+        <td width="12%" align="center"><a href="historiac.html" class="menu">ANTECEDENTES</a></td>
+        <td width="13%" align="center"><a href="incriprimaria.html" class="menu">ACADEMICO</a></td>
+        <td width="13%" align="center"><a href="prinprimaria.html" class="menu">SECCIONES</a></td>
+        <td width="12%" align="center"><a href="caleventos.html" class="menu">AVISOS</a></td>
+        <td width="13%" align="center"><a href="tareas.html" class="menu">ALUMNOS</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="35%" valign="top" bgcolor="#f6f5f2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="10"></td>
+              </tr>
+              <tr>
+                <td style="border:solid 2px #333333"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                   <tr>
+                    <td height="33" class="topbg"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/development.jpg" width="323" height="79" /></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                    
+                    <SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+var now = new Date();
+var month_array = new Array("ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE");
+document.write("<form name=date_list><table bgcolor=silver><tr><td>");
+document.write("<select name=month onchange=change_month(this.options.selectedIndex)>");
+for(i=0;i<month_array.length;i++)
+{
+ if (now.getMonth() != i)
+ {document.write ("<option value="+i+">"+month_array[i]);}
+ else
+ {document.write ("<option value="+i+" selected>"+month_array[i]);}
+
+}
+document.write("</select>");
+document.write("</td><td>");
+document.write ("<select name=year onchange=change_year(this.options[this.options.selectedIndex])>");
+for(i=2013;i<3000;i++)
+{
+ if (now.getYear() != i)
+ {document.write("<option value="+i+">"+i);}
+ else
+ {document.write("<option value="+i+" selected>"+i);}
+}
+document.write("</select></td></tr><tr><td colspan=2><center>");
+
+document.write("<table bgcolor=white border=0 cellspacing = 0 cellpading = 0 width=100%><tr bgcolor=gray align=center>");
+document.write("<td><font color=silver>L</font></td><td><font color=silver>M</td><td><font color=silver>M</td><td><font color=silver>J</td><td><font color=silver>V</td><td ><font color=silver>S</td><td ><font color=silver>D</td>");
+document.write("</tr><tr>");
+for(j=0;j<6;j++)
+{
+ for(i=0;i<7;i++)
+ {
+   document.write("<td align=center id=d"+i+"r"+j+"></td>")
+ }
+ document.write("</tr>");
+}
+
+document.write("</table>");
+
+document.write("</center></from></td></tr></table>");
+
+var show_date = new Date();
+
+function set_cal(show_date)
+{
+begin_day = new Date (show_date.getYear(),show_date.getMonth(),1);
+begin_day_date = begin_day.getDay();
+end_day = new Date (show_date.getYear(),show_date.getMonth()+1,1);
+count_day = (end_day - begin_day)/1000/60/60/24;
+input_table(begin_day_date,count_day);
+}
+set_cal(show_date);
+
+function input_table(begin,count)
+{
+init();
+j=0;
+if (begin!=0){i=begin-1;}else{i=6}
+for (c=1;c<count+1;c++)
+{
+ colum_name = eval("d"+i+"r"+j);
+ if ((now.getDate() == c)&&(show_date.getMonth() == now.getMonth())&&(show_date.getYear() == now.getYear())) {colum_name.style.backgroundColor = "blue";colum_name.style.color = "white";};
+ colum_name.innerText =  c;
+ i++;
+ if (i==7){i=0;j++;}
+}
+}
+
+function init()
+{
+for(j=0;j<6;j++)
+{
+ for(i=0;i<7;i++)
+ {
+ colum_name = eval("d"+i+"r"+j);
+ colum_name.innerText =  "-";
+ colum_name.style.backgroundColor ="";
+ colum_name.style.color ="";
+ }
+}
+}
+
+function change_month(sel_month)
+{
+show_date = new Date(show_date.getYear(),sel_month,1);
+set_cal(show_date);
+}
+
+function change_year(sel_year)
+{
+sel_year = sel_year.value;
+show_date = new Date(sel_year,show_date.getMonth(),1);
+set_cal(show_date);
+}
+//  End -->
+</script>
+                    
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text"><p align="right"></p></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/academico.jpg" width="323" height="79" /></td>
+                  </tr>
+                  <tr>
+                    <td class="category"><ul>
+                      <li><strong>INSCRIPCIONES</strong></li>
+                      <li><a href="incriprimaria.html">NIVEL PRIMARIA</a></li>
+                      <li><a href="fiprimaria.html">FICHA DE INSCRIPCION</a></li>
+                      <li><a href="incrisecundaria.html">NIVEL SECUNDARIA</a></li>
+                      <li><a href="fisecundaria.html">FICHA DE INSCRIPCION</a></li>
+                      <li><strong>REGLAMENTO</strong></li>
+                      <li><a href="reprimaria.html">NIVEL PRIMARIA</a></li>
+                      <li><a href="resecundaria.html">NIVEL SECUNDARIA</a></li>
+                    </ul></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><br />
+                      <br />
+                    </a></td>
+                  </tr>
+                  <tr>
+                    <td height="30" bgcolor="#8A9A2D"></td>
+                  </tr>
+                   </table></td>
+              </tr>
+            </table></td>
+            <td width="2%"></td>
+            <td width="63%" valign="top"><table width="573" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="10"></td>
+              </tr>
+              <tr>
+                <td><img src="images/top_body_section.jpg" width="573" height="19" /></td>
+              </tr>
+              <tr>
+                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="19%" align="center" valign="middle"><img src="images/welcome_icon.jpg" width="57" height="52" /></td>
+                    <td width="81%" class="welcome"> Colegio Teapa</td>
+                  </tr>
+                </table></td>
+              </tr>
+                 <tr>
+                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="center" valign="middle"></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td height="5"></td>
+                  </tr>
+                  <tr>
+                    <td height="5"></td>
+                  </tr>
+                  <tr>
+                    <td><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td align="center" valign="middle"><table width="573" border="0" align="center" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td height="10"></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td class="text"><h1 align="center"><strong>NIVEL PRIMARIA</strong></h1>
+                                      <center>
+                                      </center></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="141"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                      <tr>
+                                        <td height="34" valign="top"><table border="0" cellspacing="0" cellpadding="0">
+                                          <tr>
+                                            <td width="276" valign="top" align="center"><p align="center"></p></td>
+                                            <td width="15" rowspan="3" valign="top"><p align="center"><strong></strong></p></td>
+                                            <td width="271" valign="top"  align="center"><p align="center"></p></td>
+                                          </tr>
+                                          <tr>
+                                            <td width="276" valign="top"><ul>
+                                              <li>
+                                                <div align="justify">El horario  de clases en mi Colegio es de 7:00 a 13:00 hrs.
+                                                  </div>
+                                              </li>
+                                            </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">Debo tener  de asistencia el 85% para acreditar el curos. 
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">Si falto mas  días me darán de baja.
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">Me presentare  con el uniforme completo y bien arreglado. 
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">Toda mi persona  debe mostrar limpieza como signo de educación. 
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">No traeré alhajas,  adornos, celular, ipod ni nada de valor, pues si pierdo algo, mi Colegio ni mis  maestros se harán responsables.
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">Si mis papás  tienen alguna duda o comentario, lo hablaran con respeto con el personal  indicado.
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">Mis papás  siempre vendrán por mi a las 13:00 hrs. Pues mis maestros no podrán hacerse  responsables de mí después de esa hora.
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">Debo estar  en mi Escuela por lo menos 10 minutos antes de la entrada. No podre entrar al  Colegio si llego después del toque de entrada.
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">Mostrare orden  en todos mis útiles, en mis trabajos, tareas y en todas las cosas que realizo.
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">Si me  encuentro enfermo, mis papás no me llevarán al Colegio Justificarán mis faltas  por escrito e indicarán a mi maestro los cuidados que requiero.
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">Conservaré todas  las instalaciones de mi Colegio en buen estado y ayudaré a mejorarlas, ya que  me ofrecen un servicio indispensable, si algo destruyo debo repararlo o  pagarlo.</div>
+                                                </li>
+                                            </ul></td>
+                                            <td width="271" valign="top"><ul>
+                                              <li>
+                                                <div align="justify">Participare con  respeto y disciplina en los Actos Cívicos, culturales y académicos organizados  en mi Colegio.
+                                                  </div>
+                                              </li>
+                                            </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">Respetaré y  tratare con educación a todos mis compañeros, maestros, personal administrativo,  de intendencia. Evitaré decir palabras que ofendan para tener una sana  convivencia con todos.
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">El lonch que  me prepara mi mamá siempre será muy nutritivo, no chatarra. Debo comerlo a la  hora señalada, no hacerlo en el salón de clases.
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">Mis papás  pagaran mi colegiatura mensualmente durante los quince primeros días del mes,  para no ocasionar contratiempos en la organización y entrega de mis  calificaciones.
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">Mis papás  cooperan en las actividades que programa el colegio y participaran activamente  en ellas. Es necesario que asistan a todos los eventos, ya que es parte de mi formación.
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">Mis papás no  interrumpirán a mis maestros en horas de clases, a menos de que programen una  cita o esperen a las 13:00 hrs., para tratar cualquier asunto.
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                              <ul>
+                                                <li>
+                                                  <div align="justify">No podrán llevarme  a la escuela tareas o material olvidado durante las horas de clases, para  formarme en la responsabilidad.</div>
+                                                </li>
+                                            </ul></td>
+                                          </tr>
+                                          <tr>
+                                            <td width="276" valign="top"></td>
+                                            <td width="271" valign="top"></td>
+                                          </tr>
+                                          <tr>
+                                            <td valign="top"  align="center"></td>
+                                            <td valign="top"></td>
+                                            <td valign="top"  align="center"></td>
+                                          </tr>
+                                          <tr>
+                                            <td valign="top"></td>
+                                            <td valign="top"></td>
+                                            <td valign="top"></td>
+                                          </tr>
+                                        </table></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="50%" valign="top"></td>
+                                      </tr>
+                                    </table></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="50"><div align="center">
+                                      <p></p>
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="middle"></td>
+                                    </tr>
+                                </table></td>
+                              </tr>
+                              <tr>
+                                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td colspan="3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <tr>
+                                        <td align="center" valign="middle"></td>
+                                      </tr>
+                                    </table></td>
+  </tr>
+                                  <tr>
+                                    <td height="5" colspan="3"></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="5%" class="text"><h2 align="center"></h2>
+                                      <center>
+                                      </center></td>
+                                    <td width="15%" class="text"></td>
+                                    <td width="80%" class="text"><h3></h3></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="3" class="text"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="5" colspan="3"></td>
+                                  </tr>
+                                </table></td>
+</tr>
+                              <tr>
+                                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td colspan="3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <tr> </tr>
+                                    </table></td>
+                                  </tr>
+                                </table></td>
+                              </tr>
+                            </table></td>
+                            </tr>
+                          <tr>
+                            <td></td>
+                            </tr>
+                          <tr>
+                            <td></td>
+                            </tr>
+                          <tr>
+                            <td></td>
+                          </tr>
+                          </table>                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td></td>
+                              </tr>
+                          </table></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="8px;"></td>
+  </tr>
+  <tr>
+    <td height="5" bgcolor="#8a9a2c"></td>
+  </tr>
+  <tr>
+    <td class="footer"><p align="center"><strong>Avenida Gregorio Mendez # 310, Colonia Centro,   Teapa, Tabasco</strong></p>
+      <p align="center"><strong>Telefono: (932) 32 2 0065</strong><br />    
+        <br />
+      </p></td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+swfobject.registerObject("FlashID");
+</script>
+</body>
+</html>

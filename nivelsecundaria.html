@@ -1,0 +1,452 @@
+<html xmlns="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>COLEGIO TEAPA</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #485408;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(images/bg.jpg);
+	background-repeat: repeat-x;
+}
+-->
+</style></head>
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+<body>
+<table width="950" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" style="border:solid 1px #000000">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="images/header_01.jpg" width="317" height="293" /></td>
+        <td><img src="images/header_02.jpg" width="316" height="293" /></td>
+        <td><img src="images/header_03.jpg" width="317" height="293" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td background="images/menu_bg.jpg" height="65"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="25%"></td>
+        <td width="12%" align="center"><a href="index.html" class="menu">INICIO</a></td>
+        <td width="12%" align="center"><a href="historiac.html" class="menu">ANTECEDENTES</a></td>
+        <td width="13%" align="center"><a href="incriprimaria.html" class="menu">ACADEMICO</a></td>
+        <td width="13%" align="center"><a href="prinprimaria.html" class="menu">SECCIONES</a></td>
+        <td width="12%" align="center"><a href="caleventos.html" class="menu">AVISOS</a></td>
+        <td width="13%" align="center"><a href="tareas.html" class="menu">ALUMNOS</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="35%" valign="top" bgcolor="#f6f5f2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="10"></td>
+              </tr>
+              <tr>
+                <td style="border:solid 2px #333333"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                   <tr>
+                    <td height="33" class="topbg"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/development.jpg" width="323" height="79" /></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                    
+                    <SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+var now = new Date();
+var month_array = new Array("ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE");
+document.write("<form name=date_list><table bgcolor=silver><tr><td>");
+document.write("<select name=month onchange=change_month(this.options.selectedIndex)>");
+for(i=0;i<month_array.length;i++)
+{
+ if (now.getMonth() != i)
+ {document.write ("<option value="+i+">"+month_array[i]);}
+ else
+ {document.write ("<option value="+i+" selected>"+month_array[i]);}
+
+}
+document.write("</select>");
+document.write("</td><td>");
+document.write ("<select name=year onchange=change_year(this.options[this.options.selectedIndex])>");
+for(i=2013;i<3000;i++)
+{
+ if (now.getYear() != i)
+ {document.write("<option value="+i+">"+i);}
+ else
+ {document.write("<option value="+i+" selected>"+i);}
+}
+document.write("</select></td></tr><tr><td colspan=2><center>");
+
+document.write("<table bgcolor=white border=0 cellspacing = 0 cellpading = 0 width=100%><tr bgcolor=gray align=center>");
+document.write("<td><font color=silver>L</font></td><td><font color=silver>M</td><td><font color=silver>M</td><td><font color=silver>J</td><td><font color=silver>V</td><td ><font color=silver>S</td><td ><font color=silver>D</td>");
+document.write("</tr><tr>");
+for(j=0;j<6;j++)
+{
+ for(i=0;i<7;i++)
+ {
+   document.write("<td align=center id=d"+i+"r"+j+"></td>")
+ }
+ document.write("</tr>");
+}
+
+document.write("</table>");
+
+document.write("</center></from></td></tr></table>");
+
+var show_date = new Date();
+
+function set_cal(show_date)
+{
+begin_day = new Date (show_date.getYear(),show_date.getMonth(),1);
+begin_day_date = begin_day.getDay();
+end_day = new Date (show_date.getYear(),show_date.getMonth()+1,1);
+count_day = (end_day - begin_day)/1000/60/60/24;
+input_table(begin_day_date,count_day);
+}
+set_cal(show_date);
+
+function input_table(begin,count)
+{
+init();
+j=0;
+if (begin!=0){i=begin-1;}else{i=6}
+for (c=1;c<count+1;c++)
+{
+ colum_name = eval("d"+i+"r"+j);
+ if ((now.getDate() == c)&&(show_date.getMonth() == now.getMonth())&&(show_date.getYear() == now.getYear())) {colum_name.style.backgroundColor = "blue";colum_name.style.color = "white";};
+ colum_name.innerText =  c;
+ i++;
+ if (i==7){i=0;j++;}
+}
+}
+
+function init()
+{
+for(j=0;j<6;j++)
+{
+ for(i=0;i<7;i++)
+ {
+ colum_name = eval("d"+i+"r"+j);
+ colum_name.innerText =  "-";
+ colum_name.style.backgroundColor ="";
+ colum_name.style.color ="";
+ }
+}
+}
+
+function change_month(sel_month)
+{
+show_date = new Date(show_date.getYear(),sel_month,1);
+set_cal(show_date);
+}
+
+function change_year(sel_year)
+{
+sel_year = sel_year.value;
+show_date = new Date(sel_year,show_date.getMonth(),1);
+set_cal(show_date);
+}
+//  End -->
+</script>
+                    
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text"><p align="right"></p></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="category"><img src="images/tareas.jpg" width="323" height="79" /></td>
+                  </tr>
+                  <tr>
+                    <td class="category"><ul>
+                      <li><a href="historiac.html">NIVEL PRIMARIA</a></li>
+                      <li><a href="nivelsecundaria.html">NIVEL SECUNDARIA</a></li>
+                      <li><a href="nivelsecundaria.html">Primero de Secundaria</a></li>
+                      <li><a href="nivelsecundariasegundo.html">Segundo de Secundaria</a></li>
+                      <li><a href="nivelsecundariatercero.html">Tercero de Secundaria</a></li>
+                    </ul></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><br />
+                      <br />
+                    </a></td>
+                  </tr>
+                  <tr>
+                    <td height="30" bgcolor="#8A9A2D"></td>
+                  </tr>
+                   </table></td>
+              </tr>
+            </table></td>
+            <td width="2%"></td>
+            <td width="63%" valign="top"><table width="573" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="10"></td>
+              </tr>
+              <tr>
+                <td><img src="images/top_body_section.jpg" width="573" height="19" /></td>
+              </tr>
+              <tr>
+                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="19%" align="center" valign="middle"><img src="images/welcome_icon.jpg" width="57" height="52" /></td>
+                    <td width="81%" class="welcome"> Colegio Teapa</td>
+                  </tr>
+                </table></td>
+              </tr>
+                 <tr>
+                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="11%" align="center" valign="middle"></td>
+                        <td width="89%" class="text"><p class="category"></p>
+                          <h1 align="justify">Primer Grado de Secundaria</h1></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td height="5"></td>
+                  </tr>
+                  <tr>
+                    <td class="text"><h2>MATERIAS</h2></td>
+                  </tr>
+                  <tr>
+                    <td height="5"></td>
+                  </tr>
+                  <tr>
+                    <td><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="50%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="1%" height="22"><p align="justify" class="category"></p></td>
+                            <td width="9%"></td>
+                            <td width="13%"></td>
+                            <td width="65%" class="business"><ul>
+                              <li><a href="http://activartes1.blogspot.mx/" class="business">ARTES</a></li>
+                            </ul>
+                              <p></p>
+                              <ul>
+                                <li><a href="http://activiestatal1.blogspot.mx/" class="business">ASIGNATURA ESTATAL</a></li>
+                              </ul></td>
+                            <td width="9%"></td>
+                            <td width="3%"></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><ul>
+                              <li><a href="http://actbiologia1.blogspot.mx/" class="business">BIOLOGÍA</a></li>
+                            </ul></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><ul>
+                              <li class="business">
+                                  <h2><a href="http://computacion1ero.blogspot.mx/" class="business">COMPUTACIÓN</a><a href="http://computacion1ero.blogspot.mx/"></a></h2>
+                              </li>
+                            </ul></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="business"><ul>
+                              <li><a href="http://activieducacionfe1.blogspot.mx/" class="business">EDUCACIÓN EN LA FE</a></li>
+                            </ul></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><ul>
+                              <li><a href="http://colegioteapa.blogspot.mx/" class="business">ESPAÑOL</a></li>
+                            </ul></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><ul>
+                              <li><a href="http://actvgeografia1.blogspot.mx/" class="business">GEOGRAFÍA</a></li>
+                            </ul></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><ul>
+                              <li><a href="http://actingles1.blogspot.mx/" class="business">INGLES</a></li>
+                            </ul></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><ul>
+                              <li><a href="http://actimate1.blogspot.mx/" class="business">MATEMÁTICAS</a></li>
+                            </ul></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><ul>
+                              <li><a href="http://activitallerde.blogspot.mx/" class="business">TALLER DE LECTURA</a></li>
+                            </ul></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                                         <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="business"><ul>
+                              <li><a href="http://activitutoria1.blogspot.mx/" class="business">TUTORIA</a></li>
+                            </ul></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          </table></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="8px;"></td>
+  </tr>
+  <tr>
+    <td height="5" bgcolor="#8a9a2c"></td>
+  </tr>
+  <tr>
+    <td class="footer"><p align="center"><strong>Avenida Gregorio Mendez # 310, Colonia Centro,   Teapa, Tabasco</strong></p>
+      <p align="center"><strong>Telefono: (932) 32 2 0065</strong><br />    
+        <br />
+      </p></td>
+  </tr>
+</table>
+
+</body>
+</html>

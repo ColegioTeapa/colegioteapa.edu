@@ -1,0 +1,476 @@
+<html xmlns="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>COLEGIO TEAPA</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #485408;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(images/bg.jpg);
+	background-repeat: repeat-x;
+}
+-->
+</style></head>
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+<body>
+<table width="950" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" style="border:solid 1px #000000">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="images/header_01.jpg" width="317" height="293" /></td>
+        <td><img src="images/header_02.jpg" width="316" height="293" /></td>
+        <td><img src="images/header_03.jpg" width="317" height="293" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td background="images/menu_bg.jpg" height="65"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="25%"></td>
+        <td width="12%" align="center"><a href="index.html" class="menu">INICIO</a></td>
+        <td width="12%" align="center"><a href="historiac.html" class="menu">ANTECEDENTES</a></td>
+        <td width="13%" align="center"><a href="incriprimaria.html" class="menu">ACADEMICO</a></td>
+        <td width="13%" align="center"><a href="prinprimaria.html" class="menu">SECCIONES</a></td>
+        <td width="12%" align="center"><a href="caleventos.html" class="menu">AVISOS</a></td>
+        <td width="13%" align="center"><a href="tareas.html" class="menu">ALUMNOS</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="35%" valign="top" bgcolor="#f6f5f2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="10"></td>
+              </tr>
+              <tr>
+                <td style="border:solid 2px #333333"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                   <tr>
+                    <td height="33" class="topbg"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/development.jpg" width="323" height="79" /></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                    
+                    <SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+var now = new Date();
+var month_array = new Array("ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE");
+document.write("<form name=date_list><table bgcolor=silver><tr><td>");
+document.write("<select name=month onchange=change_month(this.options.selectedIndex)>");
+for(i=0;i<month_array.length;i++)
+{
+ if (now.getMonth() != i)
+ {document.write ("<option value="+i+">"+month_array[i]);}
+ else
+ {document.write ("<option value="+i+" selected>"+month_array[i]);}
+
+}
+document.write("</select>");
+document.write("</td><td>");
+document.write ("<select name=year onchange=change_year(this.options[this.options.selectedIndex])>");
+for(i=2013;i<3000;i++)
+{
+ if (now.getYear() != i)
+ {document.write("<option value="+i+">"+i);}
+ else
+ {document.write("<option value="+i+" selected>"+i);}
+}
+document.write("</select></td></tr><tr><td colspan=2><center>");
+
+document.write("<table bgcolor=white border=0 cellspacing = 0 cellpading = 0 width=100%><tr bgcolor=gray align=center>");
+document.write("<td><font color=silver>L</font></td><td><font color=silver>M</td><td><font color=silver>M</td><td><font color=silver>J</td><td><font color=silver>V</td><td ><font color=silver>S</td><td ><font color=silver>D</td>");
+document.write("</tr><tr>");
+for(j=0;j<6;j++)
+{
+ for(i=0;i<7;i++)
+ {
+   document.write("<td align=center id=d"+i+"r"+j+"></td>")
+ }
+ document.write("</tr>");
+}
+
+document.write("</table>");
+
+document.write("</center></from></td></tr></table>");
+
+var show_date = new Date();
+
+function set_cal(show_date)
+{
+begin_day = new Date (show_date.getYear(),show_date.getMonth(),1);
+begin_day_date = begin_day.getDay();
+end_day = new Date (show_date.getYear(),show_date.getMonth()+1,1);
+count_day = (end_day - begin_day)/1000/60/60/24;
+input_table(begin_day_date,count_day);
+}
+set_cal(show_date);
+
+function input_table(begin,count)
+{
+init();
+j=0;
+if (begin!=0){i=begin-1;}else{i=6}
+for (c=1;c<count+1;c++)
+{
+ colum_name = eval("d"+i+"r"+j);
+ if ((now.getDate() == c)&&(show_date.getMonth() == now.getMonth())&&(show_date.getYear() == now.getYear())) {colum_name.style.backgroundColor = "blue";colum_name.style.color = "white";};
+ colum_name.innerText =  c;
+ i++;
+ if (i==7){i=0;j++;}
+}
+}
+
+function init()
+{
+for(j=0;j<6;j++)
+{
+ for(i=0;i<7;i++)
+ {
+ colum_name = eval("d"+i+"r"+j);
+ colum_name.innerText =  "-";
+ colum_name.style.backgroundColor ="";
+ colum_name.style.color ="";
+ }
+}
+}
+
+function change_month(sel_month)
+{
+show_date = new Date(show_date.getYear(),sel_month,1);
+set_cal(show_date);
+}
+
+function change_year(sel_year)
+{
+sel_year = sel_year.value;
+show_date = new Date(sel_year,show_date.getMonth(),1);
+set_cal(show_date);
+}
+//  End -->
+</script>
+                    
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text"><p align="right"></p></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/secciones.jpg" width="323" height="79" /></td>
+                  </tr>
+                  <tr>
+                    <td class="category"><ul>
+                      <li>
+                        <h2><strong>PRIMARIA</strong></h2>
+                        <ul>
+                          <li><a href="prinprimaria.html">Principios Educativos</a></li>
+                          <li><strong>UNIFORMES</strong></li>
+                          <li><a href="unformescolar.html">Escolar</a></li>
+                          <li><a href="unformescolar.html">Deportivo</a></li>
+                          <li><strong>UTILES ESCOLARES</strong></li>
+                          <li><a href="lme1p.html">1er. Año</a></li>
+                          <li><a href="lme2p.html">2do. Año</a></li>
+                          <li><a href="lme3p.html">3er. Año</a></li>
+                          <li><a href="lme4p.html">4to. Año</a></li>
+                          <li><a href="lme5p.html">5to. Año</a></li>
+                          <li><a href="lme6p.html">6to. Año</a></li>
+                        </ul>
+                        <h2><strong>SECUNDARIA</strong></h2>
+                        <ul>
+                          <li><a href="prinsecundaria.html">Principios Educativos</a></li>
+                          <li><strong>UNIFORMES</strong></li>
+                          <li><a href="unformescolar.html">Escolar</a></li>
+                          <li><a href="unformescolar.html">Deportivo</a></li>
+                          <li><strong>UTILES ESCOLARES</strong></li>
+                          <li><a href="lme1s.html">1er. Año</a></li>
+                          <li><a href="lme2s.html">2do. Año</a></li>
+                          <li><a href="lme3s.html">3er. Año</a></li>
+                        </ul>
+                      </li>
+                    </ul></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><br />
+                      <br />
+                    </a></td>
+                  </tr>
+                  <tr>
+                    <td height="30" bgcolor="#8A9A2D"></td>
+                  </tr>
+                   </table></td>
+              </tr>
+            </table></td>
+            <td width="2%"></td>
+            <td width="63%" valign="top"><table width="573" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="10"></td>
+              </tr>
+              <tr>
+                <td><img src="images/top_body_section.jpg" width="573" height="19" /></td>
+              </tr>
+              <tr>
+                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="19%" align="center" valign="middle"><img src="images/welcome_icon.jpg" width="57" height="52" /></td>
+                    <td width="81%" class="welcome"> Colegio Teapa</td>
+                  </tr>
+                </table></td>
+              </tr>
+                 <tr>
+                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="35%" align="center" valign="middle"></td>
+                        <td width="65%" class="text"></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td height="5"></td>
+                  </tr>
+                  <tr>
+                    <td class="text"><h2><strong>
+                      <center>
+                        <h2>LISTA DE MATERIAL ESCOLAR DE 3º AÑO DE SECUNDARIA </h2>
+                      </center>
+                    </strong> </h2>
+                      <p align="center"><strong>Todas  las libretas deberán ser forradas de color Verde y </strong><br />
+                        <strong>los  libros serán forrados con papel contac.</strong></p></td>
+                  </tr>
+                  <tr>
+                    <td height="5"></td>
+                  </tr>
+                  <tr>
+                    <td height="5"></td>
+                  </tr>
+                  <tr>
+                    <td><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td colspan="2" rowspan="23" valign="top"></td>
+                        <td width="2%" valign="top"></td>
+                        <td width="46%" valign="top" bgcolor="#CCCCCC"><center>
+                          <strong>ESPAÑOL </strong>
+                        </center></td>
+                        <td width="4%" valign="top"></td>
+                        <td width="46%" valign="top" bgcolor="#CCCCCC"><center>
+                          <strong>MATEMÁTICAS </strong>
+                        </center></td>
+                        <td width="2%" valign="top"></td>
+                      </tr>
+                      <tr>
+                        <td valign="top"></td>
+                        <td valign="top"><p>- Libreta de rayas<br />
+                          - Diccionario para el nivel  secundaria<br />
+                          -Libro Horizontes Santillana  Español III<br />
+                          Autores: Alejandra Castillo Peña,  José Gutiérrez, Arturo Hdez., Talía García, Francisco García Huitrón<br />
+                          - Marca textos.</p>
+                          <p><strong><u>Nota</u>:</strong> a lo largo del ciclo escolar utilizaran hojas blancas, cartulinas, papel bond,  plumones, colores entre<strong> </strong>otros materiales.<strong> </strong></p></td>
+                        <td valign="top"></td>
+                        <td valign="top"><p>- Libro de  Horizontes Santillana Matemáticas III<br />
+                          - Lapicero<br />
+                          - Marcador  Negro/Azul  (base agua)<br />
+                          - Regla<br />
+                          - Juego de  geometría<br />
+                          - Borrador<br />
+                          - Libreta  profesional (cuadros)<br />
+                          - Hojas  Blancas<br />
+                          -  Calculadora</p></td>
+                        <td valign="top"></td>
+                      </tr>
+                      <tr>
+                        <td valign="top"></td>
+                        <td valign="top"></td>
+                        <td valign="top"></td>
+                        <td valign="top"></td>
+                        <td valign="top"></td>
+                      </tr>
+                      <tr>
+                        <td valign="top"></td>
+                        <td valign="top" bgcolor="#CCCCCC"><center>
+                          <strong>FORMACIÓN CIVICA Y ÉTICA</strong>
+                        </center></td>
+                        <td valign="top"></td>
+                        <td valign="top" bgcolor="#CCCCCC"><center>
+                          <strong>CIENCIAS (QUÍMICA) </strong>
+                        </center></td>
+                        <td valign="top"></td>
+                      </tr>
+                      <tr>
+                        <td rowspan="13" valign="top"></td>
+                        <td valign="top"></td>
+                        <td rowspan="13" valign="top"></td>
+                        <td rowspan="12" valign="top"><p>-2 Libretas  de rayas 100 hojas costuradas <br />
+                          -1 Libreta  blanca 50 hojas <br />
+                          -1 Marca  texto <br />
+                          -Tijeras <br />
+                          -Sacapuntas <br />
+                          -Corrector <br />
+                          -Pegamento <br />
+                          -Colores <br />
+                          -Plumones <br />
+                          -Cinta  maskin tape <br />
+                          -30 hojas  tamaño carta <br />
+                          -Lapiceros  (negro, rojo y azul) <br />
+                          -Engargolado  de actividades: tareas y prácticas de laboratorio (comprar en la escuela) <br />
+                          -2 carpetas  tamaño oficio <br />
+                          -Calculadora <br />
+                          -Tabla  periódica de los elementos actualizada <br />
+                          -1 USB  (laboratorio virtual) <br />
+                          -Bata de  laboratorio manga larga (favor de ponerle nombre del alumno) <br />
+                        </p>
+                          <p><strong>Nota:</strong> durante el ciclo escolar se pedirá papel bond, cartulina, imágenes, Cd, cubre  bocas, material para prácticas de laboratorio,<strong> </strong>maquetas, modelos, etc. conforme se requiera en las actividades.</p></td>
+                        <td rowspan="13" valign="top"></td>
+                      </tr>
+                      <tr>
+                        <td valign="top"><p>-1 Libreta de rayas<br />
+                          -1 Block de hojas blancas tamaño  carta<br />
+                          -2 Plumones de agua <br />
+                          -Lapiceros (azul y negro)<br />
+                          -1 marca texto<br />
+                          -1 Carpeta o carpeta archivero  (para portafolio de evidencias)<br />
+                          -2 Pliegos de papel bond  (cuadriculados)<br />
+                          -1 Plumón pincelin punta delgada<br />
+                          -Regla<br />
+                          -Tijeras<br />
+                          -Resistol (líquido o de barra)</p></td>
+                      </tr>
+                      <tr>
+                        <td valign="top"></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" bgcolor="#CCCCCC"><center>
+                          <strong>INGLÉS</strong>
+                        </center></td>
+                      </tr>
+                      <tr>
+                        <td valign="top"><p>-Libro Rally on II<br />
+                          Autores: Manuel Luna y  Adriana del Paso<br />
+                          Editorial: Macmillan<br />
+                          -Libreta de rayas<br />
+                          -Diccionario bilingüe <br />
+                          -50 hojas tamaño carta<br />
+                          -50 hojas tamaño oficio</p>
+                          <p><strong>Nota:</strong> durante el ciclo  escolar se pedirán otros materiales de acuerdo al trabajo.</p></td>
+                      </tr>
+                      <tr>
+                        <td valign="top"></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" bgcolor="#CCCCCC"><center>
+                          <strong>HISTORIA</strong>
+                        </center></td>
+                      </tr>
+                      <tr>
+                        <td valign="top"></td>
+                      </tr>
+                      <tr>
+                        <td valign="top"><p>-Libro de Historia de México II Horizontes  Santillana<br />
+                          -Libreta de Raya (Profesional) forrada y  costurada<br />
+                          -Diccionario<br />
+                          -Lapiceros negro y azul<br />
+                          -Sacapuntas<br />
+                          -Borrador<br />
+                          -Colores  o plumones<br />
+                          - Corrector<br />
+                          -Pegamento<br />
+                          -Hojas blancas tamaño carta</p></td>
+                      </tr>
+                      <tr>
+                        <td valign="top"></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" bgcolor="#CCCCCC"><center>
+                          <strong>ARTES (MUSICA-DANZA)</strong>
+                        </center></td>
+                      </tr>
+                      <tr>
+                        <td rowspan="8" valign="top"><p>- Libreta de rayas<br />
+                          - Cuaderno pautado<br />
+                          -   Flauta dulce<br />
+                          - Plumón para pintarrón.<br />
+                          -   Materiales diversos durante el ciclo escolar, dependiendo de la  actividad a realizar.</p></td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2" valign="top" bgcolor="#CCCCCC"><center>
+                          <strong>VALORES </strong>
+                        </center></td>
+                      </tr>
+                      <tr>
+                        <td valign="top"></td>
+                        <td valign="top"></td>
+                        <td valign="top"></td>
+                      </tr>
+                      <tr>
+                        <td rowspan="4" valign="top"></td>
+                        <td rowspan="4" valign="top"></td>
+                        <td valign="top"><p>-Libro de Camino de Jesús 3°<br />
+                          -Libreta de rayas<br />
+                          -Biblia<br />
+                          -Hojas blancas<br />
+                          -Crayones</p></td>
+                        <td rowspan="4" valign="top"></td>
+                      </tr>
+                      <tr>
+                        <td valign="top"></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" bgcolor="#CCCCCC"><center>
+                          <strong> COMPUTACIÓN </strong>
+                        </center></td>
+                      </tr>
+                      <tr>
+                        <td valign="top"><p>-Libreta de  Cuadros profesional<br />
+                          -Memoria USB  4Gb<br />
+                          -Lápiz/Lapicero</p></td>
+                      </tr>
+                      <tr>
+                        <td valign="top"></td>
+                        <td valign="top"></td>
+                        <td valign="top"></td>
+                        <td valign="top"></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="8px;"></td>
+  </tr>
+  <tr>
+    <td height="5" bgcolor="#8a9a2c"></td>
+  </tr>
+  <tr>
+    <td class="footer"><p align="center"><strong>Avenida Gregorio Mendez # 310, Colonia Centro,   Teapa, Tabasco</strong></p>
+      <p align="center"><strong>Telefono: (932) 32 2 0065</strong><br />    
+        <br />
+      </p></td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,373 @@
+<html xmlns="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>COLEGIO TEAPA</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #485408;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(images/bg.jpg);
+	background-repeat: repeat-x;
+}
+-->
+</style></head>
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+<body>
+<table width="950" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" style="border:solid 1px #000000">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="images/header_01.jpg" width="317" height="293" /></td>
+        <td><img src="images/header_02.jpg" width="316" height="293" /></td>
+        <td><img src="images/header_03.jpg" width="317" height="293" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td background="images/menu_bg.jpg" height="65"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="25%"></td>
+        <td width="12%" align="center"><a href="index.html" class="menu">INICIO</a></td>
+        <td width="12%" align="center"><a href="historiac.html" class="menu">ANTECEDENTES</a></td>
+        <td width="13%" align="center"><a href="incriprimaria.html" class="menu">ACADEMICO</a></td>
+        <td width="13%" align="center"><a href="prinprimaria.html" class="menu">SECCIONES</a></td>
+        <td width="12%" align="center"><a href="caleventos.html" class="menu">AVISOS</a></td>
+        <td width="13%" align="center"><a href="tareas.html" class="menu">ALUMNOS</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="35%" valign="top" bgcolor="#f6f5f2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="10"></td>
+              </tr>
+              <tr>
+                <td style="border:solid 2px #333333"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                   <tr>
+                    <td height="33" class="topbg"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/development.jpg" width="323" height="79" /></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                    
+                    <SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+var now = new Date();
+var month_array = new Array("ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE");
+document.write("<form name=date_list><table bgcolor=silver><tr><td>");
+document.write("<select name=month onchange=change_month(this.options.selectedIndex)>");
+for(i=0;i<month_array.length;i++)
+{
+ if (now.getMonth() != i)
+ {document.write ("<option value="+i+">"+month_array[i]);}
+ else
+ {document.write ("<option value="+i+" selected>"+month_array[i]);}
+
+}
+document.write("</select>");
+document.write("</td><td>");
+document.write ("<select name=year onchange=change_year(this.options[this.options.selectedIndex])>");
+for(i=2013;i<3000;i++)
+{
+ if (now.getYear() != i)
+ {document.write("<option value="+i+">"+i);}
+ else
+ {document.write("<option value="+i+" selected>"+i);}
+}
+document.write("</select></td></tr><tr><td colspan=2><center>");
+
+document.write("<table bgcolor=white border=0 cellspacing = 0 cellpading = 0 width=100%><tr bgcolor=gray align=center>");
+document.write("<td><font color=silver>L</font></td><td><font color=silver>M</td><td><font color=silver>M</td><td><font color=silver>J</td><td><font color=silver>V</td><td ><font color=silver>S</td><td ><font color=silver>D</td>");
+document.write("</tr><tr>");
+for(j=0;j<6;j++)
+{
+ for(i=0;i<7;i++)
+ {
+   document.write("<td align=center id=d"+i+"r"+j+"></td>")
+ }
+ document.write("</tr>");
+}
+
+document.write("</table>");
+
+document.write("</center></from></td></tr></table>");
+
+var show_date = new Date();
+
+function set_cal(show_date)
+{
+begin_day = new Date (show_date.getYear(),show_date.getMonth(),1);
+begin_day_date = begin_day.getDay();
+end_day = new Date (show_date.getYear(),show_date.getMonth()+1,1);
+count_day = (end_day - begin_day)/1000/60/60/24;
+input_table(begin_day_date,count_day);
+}
+set_cal(show_date);
+
+function input_table(begin,count)
+{
+init();
+j=0;
+if (begin!=0){i=begin-1;}else{i=6}
+for (c=1;c<count+1;c++)
+{
+ colum_name = eval("d"+i+"r"+j);
+ if ((now.getDate() == c)&&(show_date.getMonth() == now.getMonth())&&(show_date.getYear() == now.getYear())) {colum_name.style.backgroundColor = "blue";colum_name.style.color = "white";};
+ colum_name.innerText =  c;
+ i++;
+ if (i==7){i=0;j++;}
+}
+}
+
+function init()
+{
+for(j=0;j<6;j++)
+{
+ for(i=0;i<7;i++)
+ {
+ colum_name = eval("d"+i+"r"+j);
+ colum_name.innerText =  "-";
+ colum_name.style.backgroundColor ="";
+ colum_name.style.color ="";
+ }
+}
+}
+
+function change_month(sel_month)
+{
+show_date = new Date(show_date.getYear(),sel_month,1);
+set_cal(show_date);
+}
+
+function change_year(sel_year)
+{
+sel_year = sel_year.value;
+show_date = new Date(sel_year,show_date.getMonth(),1);
+set_cal(show_date);
+}
+//  End -->
+</script>
+                    
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text"><p align="right"></p></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/secciones.jpg" width="323" height="79" /></td>
+                  </tr>
+                  <tr>
+                    <td class="category"><ul>
+                      <li>
+                        <h2><strong>PRIMARIA</strong></h2>
+                        <ul>
+                          <li><a href="prinprimaria.html">Principios Educativos</a></li>
+                          <li><strong>UNIFORMES</strong></li>
+                          <li><a href="unformescolar.html">Escolar</a></li>
+                          <li><a href="unformescolar.html">Deportivo</a></li>
+                          <li><strong>UTILES ESCOLARES</strong></li>
+                          <li><a href="lme1p.html">1er. Año</a></li>
+                          <li><a href="lme2p.html">2do. Año</a></li>
+                          <li><a href="lme3p.html">3er. Año</a></li>
+                          <li><a href="lme4p.html">4to. Año</a></li>
+                          <li><a href="lme5p.html">5to. Año</a></li>
+                          <li><a href="lme6p.html">6to. Año</a></li>
+                        </ul>
+                        <h2><strong>SECUNDARIA</strong></h2>
+                        <ul>
+                          <li><a href="prinsecundaria.html">Principios Educativos</a></li>
+                          <li><strong>UNIFORMES</strong></li>
+                          <li><a href="uniformescolar.html">Escolar</a></li>
+                          <li><a href="unformescolar.html">Deportivo</a></li>
+                          <li><strong>UTILES ESCOLARES</strong></li>
+                          <li><a href="lme1s.html">1er. Año</a></li>
+                          <li><a href="lme2s.html">2do. Año</a></li>
+                          <li><a href="lme3s.html">3er. Año</a></li>
+                        </ul>
+                      </li>
+                    </ul></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><br />
+                      <br />
+                    </a></td>
+                  </tr>
+                  <tr>
+                    <td height="30" bgcolor="#8A9A2D"></td>
+                  </tr>
+                   </table></td>
+              </tr>
+            </table></td>
+            <td width="2%"></td>
+            <td width="63%" valign="top"><table width="573" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="10"></td>
+              </tr>
+              <tr>
+                <td><img src="images/top_body_section.jpg" width="573" height="19" /></td>
+              </tr>
+              <tr>
+                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="19%" align="center" valign="middle"><img src="images/welcome_icon.jpg" width="57" height="52" /></td>
+                    <td width="81%" class="welcome"> Colegio Teapa</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="center" valign="middle"><h2><strong>UNIFORME ESCOLAR</strong></h2></td>
+                  </tr>
+                </table></td>
+              </tr>
+                 <tr>
+                <td class="body_bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="3%" class="text" ><h3></h3></td>
+                    <td width="43%" class="text" bgcolor="#CCCCCC"><h3><strong>
+                      <center>
+                        SEÑORITAS
+                      </center>
+                    </strong></h3></td>
+                    <td width="4%" class="text"></td>
+                    <td width="39%" class="text" bgcolor="#CCCCCC"><h3><strong>
+                      <center>
+                        VARONES
+                      </center>
+                    </strong></h3></td>
+                    <td width="11%" class="text" ></td>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="35%" align="center" valign="middle"></td>
+                        <td width="65%" class="text"></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" rowspan="2"><ul>
+                      <li>Falda azul marino debajo de la  rodilla.</li>
+                      <li>Cacetas blancas con franjas  azul marino.</li>
+                      <li>Zapatos negros escolares.</li>
+                      <li>Blusa blanca (fajada).</li>
+                      <li>Chamarra azul marino. (la del  colegio)</li>
+                      <li>Los adornos del cabello  (blancos)</li>
+                      <li>Pelo recogido</li>
+                      <li>Sin maquillaje facial,  esmalte y uñas largas.</li>
+                      <li>Evitar porta pulseras.</li>
+                      <li>No depilar cejas.</li>
+                    </ul></td>
+                    <td rowspan="2"></td>
+                    <td colspan="2"></td>
+                    <td height="5"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><ul>
+                      <li>Pantalón azul marino </li>
+                      <li>Camisa del colegio (fajada)</li>
+                      <li>Calcetines blancos</li>
+                      <li>Zapatos negros de vestir, no  tipo tenis.</li>
+                      <li>Cinturón.</li>
+                      <li>Pelo corto (tipo escolar)</li>
+                      <li>Son barba ni bigote.</li>
+                      <li>Evitar portar gorras,  pulseras, aretes y collares.</li>
+                    </ul>
+                      <p></p>
+                      <p></p>
+                      <p></p></td>
+                    <td class="text"><h2><strong>
+                      <center>
+                        <h2></h2>
+                      </center>
+                    </strong></h2></td>
+                  </tr>
+                  <tr>
+                    <td colspan="5"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="50%" valign="top"></td>
+                      </tr>
+                    </table></td>
+                    <td height="5"></td>
+                  </tr>
+                  <tr>
+                    <td  class="text"><h3></h3></td>
+                    <td bgcolor="#CCCCCC" class="text"><h3><strong>
+                      <center>
+                        DUCACIÓN FISICA
+                      </center>
+                    </strong></h3></td>
+                    <td class="text"></td>
+                    <td colspan="2" class="text"><h3></h3></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="body_bg"><ul>
+                      <li>Tenis  completamente BLANCO (tanto para señoritas como para varones) y el uniforme  apropiado requerido por la institución.</li>
+                    </ul></td>
+                    <td class="text"></td>
+                    <td colspan="2" class="text"><h3></h3></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="body_bg"></td>
+                    <td class="text"></td>
+                    <td colspan="2" class="text"></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="body_bg"></td>
+                    <td class="text"></td>
+                    <td colspan="2" class="text"></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="body_bg"></td>
+                    <td class="text"></td>
+                    <td colspan="2" class="text"></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="body_bg"></td>
+                    <td class="text"></td>
+                    <td colspan="2" class="text"></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="body_bg"></td>
+                    <td class="text"></td>
+                    <td colspan="2" class="text"></td>
+                    <td></td>
+                  </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="8px;"></td>
+  </tr>
+  <tr>
+    <td height="5" bgcolor="#8a9a2c"></td>
+  </tr>
+  <tr>
+    <td class="footer"><p align="center"><strong>Avenida Gregorio Mendez # 310, Colonia Centro,   Teapa, Tabasco</strong></p>
+      <p align="center"><strong>Telefono: (932) 32 2 0065</strong><br />    
+        <br />
+      </p></td>
+  </tr>
+</table>
+</body>
+</html>
